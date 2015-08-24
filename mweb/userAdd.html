@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>管理平台</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+        <link href="css/AdminLTE.css" rel="stylesheet" />
+        <link href="lib/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+        <link href="lib/chosen/chosen.fix.css" rel="stylesheet" />
+        <link href="lib/select2/select2.css" rel="stylesheet" />
+        
+    </head>
+    <body class="skin-blue">
+        <header class="header">
+            <a href="index.html" class="logo">管理平台</a>
+            <nav class="navbar navbar-static-top" role="navigation">
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">显隐菜单</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                管理员 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">账号设置</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">退出</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <aside class="left-side sidebar-offcanvas">
+                <section class="sidebar">
+                    <ul class="sidebar-menu">
+                        <!-- <li class="active">
+                            <a href="index.html">
+                                <i class="fa fa-dashboard"></i> <span>工作台</span>
+                            </a>
+                        </li> -->
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-user"></i> 
+                                <span>用户管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 个人信息</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 公司信息</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 机构信息</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 信用额度</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 认证审核列表</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 个人认证信息</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>借款管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 借款意向</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 借款列表</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 待审核</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 待发布</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 借款中</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 待放款</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 还款中</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 已逾期</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 已垫付</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 已结清</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 已流标</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 已作废</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>债权管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 债权列表</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 转让中的债权</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 已转让的债权</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>资金管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 账户管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 用户记录</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 平台记录</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 充值管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 提现管理</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>贷后管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                               <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 30天内待还</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 逾期列表</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 催收记录</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>统计管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 资金统计</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 业务统计</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 用户统计</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-folder"></i> <span>运营管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                               <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 文章管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 广告管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 友链设置</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 消息管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 活动推广</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-folder"></i> <span>系统管理</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                               <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 账号管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 角色管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 基本设置</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 业务设置</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 模版管理</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 日志管理</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <aside class="right-side">
+                <section class="content-header">
+                    <ol class="breadcrumb">
+                        <li>用户管理</li>
+                        <li>个人信息</li>
+                        <li>新增用户</li>
+                    </ol>
+                </section>
+
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <form class="form-horizontal" name="form1" action="/user"> 
+                            <div class="nav-tabs-custom">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#user" data-toggle="tab" aria-expanded="true">用户信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#basic" data-toggle="tab" aria-expanded="true">基本信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#family" data-toggle="tab" aria-expanded="false">家庭信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#work" data-toggle="tab" aria-expanded="false">工作信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="#asset" data-toggle="tab" aria-expanded="false">资产信息</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="user">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">用户名</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm" name="username">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">密码</label>
+                                            <div class="col-sm-4">
+                                              <input type="password" class="form-control input-sm" name="password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">确认密码</label>
+                                            <div class="col-sm-4">
+                                              <input type="password" class="form-control input-sm" name="rePassword">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">是否启用</label>
+                                            <div class="col-sm-4">
+                                              <select class="form-control input-sm" name="enabled">
+                                                    <option>是</option>
+                                                    <option>否</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="basic">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">姓名</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm" name="realname">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">身份证号码</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm" name="idNo">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">身份证签发日期</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm datetimepicker-yyyy-MM-dd" name="idNo">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">身份证到期日期</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm datetimepicker-yyyy-MM" name="idNo">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">手机号</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm" placeholder="手机号">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="family">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">婚姻状况</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">子女状况</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">直系亲属姓名</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">直系亲属关系</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="work">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">公司名称</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">公司类别</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">公司行业</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">公司规模</label>
+                                            <div class="col-sm-4">
+                                              <input type="text" class="form-control input-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="asset">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">有无房产</label>
+                                            <div class="col-sm-4">
+                                                <select class="chosen-select" style="width:100%;">
+                                                    <option>-</option>
+                                                    <option>有</option>
+                                                    <option>无</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">有无房贷</label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control input-sm">
+                                                    <option>-</option>
+                                                    <option>有</option>
+                                                    <option>无</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">有无车产</label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control input-sm">
+                                                    <option>-</option>
+                                                    <option>有</option>
+                                                    <option>无</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">有无车贷</label>
+                                            <div class="col-sm-4">
+                                                <select class="form-control input-sm" >
+                                                    <option>-</option>
+                                                    <option>有</option>
+                                                    <option>无</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">意见</label>
+                                        <div class="col-sm-4">
+                                            <textarea class="form-control" rows="3" ></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-4 col-md-offset-2">
+                                            <a href="user.html" class="btn btn-default btn-sm">新增</a>
+                                            <a href="user.html" class="btn btn-default btn-sm">返回</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+        <script src="js/jquery-2.1.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/AdminLTE/app.js"></script>
+        <script src="lib/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+        <script src="lib/bootstrap-datetimepicker/bootstrap-datetimepicker.zh-CN.js"></script>
+        <script src="lib/bootstrap-datetimepicker/bootstrap-datetimepicker.common.js"></script>
+        <script src="lib/chosen/chosen.jquery.min.js"></script>
+        <script src="lib/select2/select2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+              //$(".basic-single").select2();
+              $('.chosen-select').chosen();
+            });
+        </script>
+    </body>
+</html>
