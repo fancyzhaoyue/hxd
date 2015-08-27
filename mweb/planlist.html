@@ -13,7 +13,6 @@
         <header class="header">
             <a href="index.html" class="logo">管理平台</a>
             <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
                 <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
                     <span class="sr-only">显隐菜单</span>
                     <span class="icon-bar"></span>
@@ -22,7 +21,6 @@
                 </a>
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">系统设置</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
@@ -149,10 +147,10 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li>
-                                    <a href="productlist.html"><i class="fa fa-angle-double-right"></i> 理财产品</a>
+                                    <a href="planlist.html"><i class="fa fa-angle-double-right"></i> 理财产品</a>
                                 </li>
                                 <li>
-                                    <a href="planlist.html"><i class="fa fa-angle-double-right"></i> 理财计划</a>
+                                    <a href="#"><i class="fa fa-angle-double-right"></i> 理财计划</a>
                                 </li>
                             </ul>
                         </li>
@@ -271,102 +269,194 @@
                         </li>
                     </ul>
                 </section>
-                <!-- /.sidebar -->
             </aside>
 
             <aside class="right-side">
                 <section class="content-header">
-                    <h1>工作台</h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Dashboard</li>
+                        <li>理财管理</li>
+                        <li>理财计划列表</li>
                     </ol>
                 </section>
 
                 <section class="content">
-
                     <div class="row">
-                        <div class="col-lg-3 col-xs-6">
-                            <div class="small-box bg-aqua">
-                                <div class="inner">
-                                    <h3>
-                                        150
-                                    </h3>
-                                    <p>
-                                        New Orders
-                                    </p>
+                        <div class="col-md-12">
+                            <div class="box box-solid">
+                                <div class="box-header">
+                                    <div class="box-tools">
+                                        <a class="btn btn-default btn-sm" href="planAdd.html" >
+                                            <i class="fa fa-plus"></i> 新增
+                                        </a>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <i class="fa fa-refresh"></i> 刷新
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">
+                                            <i class="fa fa-search"></i> 高级查询
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-sm">
+                                            <i class="fa fa-share"></i> 导出
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="icon">
-                                    <i class="ion ion-bag"></i>
+                                <div class="box-body">
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                        <tr>
+                                            <th>计划名称</th>
+                                            <th>计划金额(元)</th>
+                                            <th>预期年化收益</th>
+                                            <th>锁定期限(月)</th>
+                                            <th>发布日期</th>
+                                            <th>结束日期</th>
+                                            <th>状态</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        <tr>
+                                            <td>H计划-A150827期</td>
+                                            <td>1,500,000</td>
+                                            <td>6.0%</td>
+                                            <td>3</td>
+                                            <td>2015-08-27</td>
+                                            <td>2015-11-30</td>
+                                            <td>开放加入</td>
+                                            <td>
+                                                <a href="userDetail.html" title="查看"><i class="fa fa-eye"></i></a> / 
+                                                <a href="userEdit.html" title="修改"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>H计划-B150827期</td>
+                                            <td>1,500,000</td>
+                                            <td>8.0%</td>
+                                            <td>6</td>
+                                            <td>2015-08-27</td>
+                                            <td>2016-02-28</td>
+                                            <td>开放加入</td>
+                                            <td>
+                                                <a href="userDetail.html" title="查看"><i class="fa fa-eye"></i></a> / 
+                                                <a href="userEdit.html" title="修改"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>H计划-A150827期</td>
+                                            <td>1,500,000</td>
+                                            <td>6.0%</td>
+                                            <td>3</td>
+                                            <td>2015-08-27</td>
+                                            <td>2015-11-30</td>
+                                            <td>开放加入</td>
+                                            <td>
+                                                <a href="userDetail.html" title="查看"><i class="fa fa-eye"></i></a> / 
+                                                <a href="userEdit.html" title="修改"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>H计划-A150827期</td>
+                                            <td>1,500,000</td>
+                                            <td>6.0%</td>
+                                            <td>3</td>
+                                            <td>2015-08-27</td>
+                                            <td>2015-11-30</td>
+                                            <td>开放加入</td>
+                                            <td>
+                                                <a href="userDetail.html" title="查看"><i class="fa fa-eye"></i></a> / 
+                                                <a href="userEdit.html" title="修改"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>H计划-A150827期</td>
+                                            <td>1,500,000</td>
+                                            <td>6.0%</td>
+                                            <td>3</td>
+                                            <td>2015-08-27</td>
+                                            <td>2015-11-30</td>
+                                            <td>开放加入</td>
+                                            <td>
+                                                <a href="userDetail.html" title="查看"><i class="fa fa-eye"></i></a> / 
+                                                <a href="userEdit.html" title="修改"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>H计划-A150827期</td>
+                                            <td>1,500,000</td>
+                                            <td>6.0%</td>
+                                            <td>3</td>
+                                            <td>2015-08-27</td>
+                                            <td>2015-11-30</td>
+                                            <td>开放加入</td>
+                                            <td>
+                                                <a href="userDetail.html" title="查看"><i class="fa fa-eye"></i></a> / 
+                                                <a href="userEdit.html" title="修改"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-xs-6">
-                            <div class="small-box bg-green">
-                                <div class="inner">
-                                    <h3>
-                                        53<sup style="font-size: 20px">%</sup>
-                                    </h3>
-                                    <p>
-                                        Bounce Rate
-                                    </p>
+                                <div class="box-footer clearfix">
+                                    <ul class="pagination pagination-sm no-margin pull-right">
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
                                 </div>
-                                <div class="icon">
-                                    <i class="ion ion-stats-bars"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-xs-6">
-                            <div class="small-box bg-yellow">
-                                <div class="inner">
-                                    <h3>
-                                        44
-                                    </h3>
-                                    <p>
-                                        User Registrations
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-person-add"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-xs-6">
-                            <div class="small-box bg-red">
-                                <div class="inner">
-                                    <h3>
-                                        65
-                                    </h3>
-                                    <p>
-                                        Unique Visitors
-                                    </p>
-                                </div>
-                                <div class="icon">
-                                    <i class="ion ion-pie-graph"></i>
-                                </div>
-                                <a href="#" class="small-box-footer">
-                                    More info <i class="fa fa-arrow-circle-right"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
-
                 </section>
             </aside>
         </div>
 
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title">高级查询</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">计划名称</label>
+                                <div class="col-sm-4">
+                                  <input type="text" class="form-control input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">计划金额</label>
+                                <div class="col-sm-4">
+                                  <input type="text" class="form-control input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">计划类型</label>
+                                <div class="col-sm-4">
+                                  <input type="text" class="form-control input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label">到期日期</label>
+                                <div class="col-sm-4">
+                                  <input type="text" class="form-control input-sm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-md-offset-4">
+                                    <button type="button" class="btn btn-default btn-sm">查询</button>
+                                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">取消</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="js/jquery-2.1.3.min.js"></script>
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- AdminLTE App -->
         <script src="js/AdminLTE/app.js" type="text/javascript"></script>
     </body>
 </html>

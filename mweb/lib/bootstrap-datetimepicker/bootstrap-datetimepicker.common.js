@@ -26,6 +26,15 @@ $(document).ready(function(){
 		forceParse:0,
 		format:"yyyy-mm-dd"
 	});
+	$(".datetimepicker-yyyy-MM-dd-hh").datetimepicker({
+		language:"zh-CN",
+		weekStart:1,
+		autoclose:1,
+		startView:2,
+		minView:1,
+		forceParse:0,
+		format:"yyyy-mm-dd hh"
+	});
 	$(".datetimepicker-yyyy-MM-dd-HH-mm").datetimepicker({
 		language:"zh-CN",
 		weekStart:1,
